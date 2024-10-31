@@ -2,11 +2,17 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setBrowserSyncConfig({
       files: './public/static/**/*.css',
     });
+
+    eleventyConfig.addPassthroughCopy({"global.out.css": "global.css"});
+    eleventyConfig.addPassthroughCopy('src/js/');
+
+    eleventyConfig.addLayoutAlias('base', 'layouts/base.njk');
   
     return {
+      passthroughFileCopy: true,
       dir: {
         input: 'src',
-        output: 'public',
+        output: '_site',
       },
     };
   };
