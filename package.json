@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "watch:tailwind": "tailwindcss -i ./src/_includes/css/global.css -o global.out.css --watch",
-    "build:tailwind": "tailwindcss -i ./src/_includes/css/global.css -o ./_site/global.css --minify",
+    "watch:tailwind": "tailwindcss -i ./src/css/global.css -o global.out.css --watch",
+    "build:tailwind": "tailwindcss -i ./src/css/global.css -o ./_site/global.css --minify",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "ELEVENTY_ENV=development eleventy",
     "start": "npm run watch:eleventy & npm run watch:tailwind",
